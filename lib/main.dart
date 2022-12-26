@@ -31,6 +31,26 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      bottomNavigationBar: NavigationBar(
+        destinations: const [
+          NavigationDestination(
+            icon: Icon(Icons.home_filled),
+            label: 'Home',
+          ),
+          NavigationDestination(
+            icon: Icon(Icons.snippet_folder_outlined),
+            label: 'Folder',
+          ),
+          NavigationDestination(
+            icon: Icon(Icons.data_thresholding_outlined),
+            label: 'Data',
+          ),
+          NavigationDestination(
+            icon: Icon(Icons.settings),
+            label: 'settings',
+          ),
+        ],
+      ),
       body: SingleChildScrollView(
         scrollDirection: Axis.vertical,
         child: Column(
@@ -73,7 +93,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                   Container(
                     decoration: BoxDecoration(
-                      color: Colors.pink.shade400,
+                      color: Color.fromARGB(255, 209, 38, 144),
                       borderRadius: BorderRadiusDirectional.circular(40),
                     ),
                     padding: EdgeInsets.fromLTRB(20, 20, 10, 20),
@@ -89,7 +109,7 @@ class _MyHomePageState extends State<MyHomePage> {
                           style: ElevatedButton.styleFrom(
                             shape: CircleBorder(),
                             padding: EdgeInsets.all(25),
-                            backgroundColor: Colors.pink.shade200,
+                            backgroundColor: Color.fromARGB(255, 244, 143, 197),
                           ),
                         ),
                         Column(
