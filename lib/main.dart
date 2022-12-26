@@ -32,6 +32,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SingleChildScrollView(
+        scrollDirection: Axis.vertical,
         child: Column(
           children: [
             Container(
@@ -131,7 +132,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
-                        'Lates project',
+                        'Latest project',
                         style: TextStyle(
                           fontSize: 25,
                           fontWeight: FontWeight.bold,
@@ -149,60 +150,299 @@ class _MyHomePageState extends State<MyHomePage> {
                   SizedBox(
                     height: 20,
                   ),
-                  Row(
-                    children: [
-                      SingleChildScrollView(
-                        scrollDirection: Axis.horizontal,
-                        physics: AlwaysScrollableScrollPhysics(),
-                      ),
-                      Container(
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadiusDirectional.circular(30),
+                  SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Row(
+                      children: [
+                        Container(
+                          decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadiusDirectional.circular(30),
+                          ),
+                          padding: EdgeInsets.fromLTRB(20, 20, 60, 100),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              ElevatedButton(
+                                onPressed: () {},
+                                child: Icon(
+                                  Icons.videocam_outlined,
+                                  color: Colors.blue,
+                                  size: 30,
+                                ),
+                                style: ElevatedButton.styleFrom(
+                                  shape: CircleBorder(),
+                                  padding: EdgeInsets.fromLTRB(10, 20, 10, 20),
+                                  backgroundColor:
+                                      Color.fromARGB(255, 245, 251, 254),
+                                ),
+                              ),
+                              SizedBox(
+                                height: 20,
+                              ),
+                              Text(
+                                'Meeting With Dribbble',
+                                style: TextStyle(
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                              SizedBox(
+                                height: 8,
+                              ),
+                              Text(
+                                'Branding design',
+                                style: TextStyle(
+                                  fontSize: 18,
+                                  color: Colors.black26,
+                                ),
+                              ),
+                              SizedBox(
+                                height: 30,
+                              ),
+                              TweenAnimationBuilder(
+                                duration: const Duration(),
+                                tween: Tween(begin: 0.0, end: 0.0),
+                                builder: (context, value, _) => SizedBox(
+                                  width: 200,
+                                  height: 5,
+                                  child: LinearProgressIndicator(
+                                    semanticsValue: '0.75',
+                                    value: 0.75,
+                                    semanticsLabel: '25%',
+                                    color: Colors.pink,
+                                    backgroundColor: Colors.black12,
+                                  ),
+                                ),
+                              ),
+                              Row(
+                                children: [
+                                  Text(
+                                    "Progress",
+                                    style: TextStyle(
+                                      color: Colors.black26,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    width: 115,
+                                  ),
+                                  Text(
+                                    "75%",
+                                    style: TextStyle(
+                                      color: Colors.pink,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ],
+                          ),
                         ),
-                        padding: EdgeInsets.fromLTRB(20, 20, 60, 130),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
+                        SizedBox(
+                          width: 20,
+                        ),
+                        Container(
+                          decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadiusDirectional.circular(30),
+                          ),
+                          padding: EdgeInsets.fromLTRB(20, 20, 40, 100),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              ElevatedButton(
+                                onPressed: () {},
+                                child: Icon(
+                                  Icons.search,
+                                  color: Colors.pink,
+                                  size: 30,
+                                ),
+                                style: ElevatedButton.styleFrom(
+                                  shape: CircleBorder(),
+                                  padding: EdgeInsets.fromLTRB(10, 20, 10, 20),
+                                  backgroundColor: Colors.pink.shade50,
+                                ),
+                              ),
+                              SizedBox(
+                                height: 20,
+                              ),
+                              Text(
+                                'Research For Mobile App',
+                                style: TextStyle(
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                              SizedBox(
+                                height: 8,
+                              ),
+                              Text(
+                                'Fashion App Mobile',
+                                style: TextStyle(
+                                  fontSize: 18,
+                                  color: Colors.black26,
+                                ),
+                              ),
+                              SizedBox(
+                                height: 30,
+                              ),
+                              TweenAnimationBuilder(
+                                duration: const Duration(),
+                                tween: Tween(begin: 0.0, end: 0.0),
+                                builder: (context, value, _) => SizedBox(
+                                  width: 200,
+                                  height: 5,
+                                  child: LinearProgressIndicator(
+                                    semanticsValue: '0.75',
+                                    value: 0.50,
+                                    semanticsLabel: '25%',
+                                    color: Colors.pink,
+                                    backgroundColor: Colors.black12,
+                                  ),
+                                ),
+                              ),
+                              Row(
+                                children: [
+                                  Text(
+                                    "Progress",
+                                    style: TextStyle(
+                                      color: Colors.black26,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    width: 115,
+                                  ),
+                                  Text(
+                                    "50%",
+                                    style: TextStyle(
+                                      color: Colors.pink,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        'Urgent Task',
+                        style: TextStyle(
+                          fontSize: 25,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      Text(
+                        'See All',
+                        style: TextStyle(
+                          fontSize: 20,
+                          color: Colors.blue,
+                        ),
+                      ),
+                    ],
+                  ),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  Container(
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadiusDirectional.circular(20),
+                    ),
+                    padding: EdgeInsets.fromLTRB(20, 20, 20, 20),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            ElevatedButton(
-                              onPressed: () {},
-                              child: Icon(
-                                Icons.videocam_outlined,
-                                color: Colors.blue,
-                                size: 30,
-                              ),
-                              style: ElevatedButton.styleFrom(
-                                shape: CircleBorder(),
-                                padding: EdgeInsets.fromLTRB(10, 20, 10, 20),
-                                backgroundColor:
-                                    Color.fromARGB(255, 245, 251, 254),
-                              ),
-                            ),
-                            SizedBox(
-                              height: 20,
-                            ),
                             Text(
-                              'Meeting With Dribbble',
+                              'Landing Page Design',
                               style: TextStyle(
                                 fontSize: 20,
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
-                            SizedBox(
-                              height: 8,
-                            ),
-                            Text(
-                              'Branding design',
-                              style: TextStyle(
-                                fontSize: 18,
-                                color: Colors.black26,
+                            Container(
+                              decoration: BoxDecoration(
+                                color: Colors.black12,
+                                borderRadius:
+                                    BorderRadiusDirectional.circular(40),
+                              ),
+                              padding: EdgeInsets.fromLTRB(10, 3, 10, 3),
+                              child: Text(
+                                '8 days left',
+                                style: TextStyle(
+                                  color: Colors.black,
+                                  fontWeight: FontWeight.bold,
+                                ),
                               ),
                             ),
                           ],
                         ),
-                      ),
-                    ],
-                  )
+                        SizedBox(
+                          height: 10,
+                        ),
+                        Text(
+                          'Task Manager Landing Page',
+                          style: TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.black12,
+                          ),
+                        ),
+                        SizedBox(
+                          height: 40,
+                        ),
+                        Row(
+                          children: [
+                            Icon(Icons.access_time_sharp),
+                            SizedBox(
+                              width: 5,
+                            ),
+                            Text(
+                              'Today 09:00 AM - 12:00 AM',
+                              style: TextStyle(
+                                color: Colors.black54,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                            SizedBox(
+                              width: 160,
+                            ),
+                            TweenAnimationBuilder(
+                              duration: const Duration(),
+                              tween: Tween(begin: 0.0, end: 0.0),
+                              builder: (context, value, _) => SizedBox(
+                                width: 50,
+                                height: 50,
+                                child: CircularProgressIndicator(
+                                  value: 0.25,
+                                  semanticsLabel: '25%',
+                                  color: Colors.pink,
+                                  backgroundColor: Colors.black12,
+                                  strokeWidth: 5,
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                        SizedBox(
+                          height: 10,
+                        )
+                      ],
+                    ),
+                  ),
                 ],
               ),
             ),
